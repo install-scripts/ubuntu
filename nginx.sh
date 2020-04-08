@@ -4,6 +4,7 @@
 
 ### Enforce gz
 #server {
+#       gunzip on;
 #    gzip on;
 #    gzip_static on;    
 #    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
@@ -15,6 +16,7 @@
 
 
 #location ~ ^/(assets|images|javascripts|stylesheets|swfs|system)/ {
+#      gunzip on;
 #      gzip_static on;
 #      expires     max;
 #      add_header  Cache-Control public;
